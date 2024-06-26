@@ -1,0 +1,68 @@
+/* navbar.css */
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #27ae60;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    background-color: rgba(39, 174, 96, 0.9);
+    padding: 15px 20px;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-button:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 20px;
+    font-family: 'Arial Black', sans-serif;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.profile-icon {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.profile-icon:hover {
+    opacity: 0.7;
+}
+
+.logo-link {
+    text-decoration: none; /* Remove underline for logo link */
+}

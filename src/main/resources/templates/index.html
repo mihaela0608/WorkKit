@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #27ae60;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+
+
+        .hero-section {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero-title {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-description {
+            font-size: 28px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 100px 20px 20px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #27ae60;
+        }
+
+        .info {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background-color: #f1f1f1;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+
+        .feature-description {
+            font-size: 18px;
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <p class="hero-title">Welcome to WorkKit</p>
+            <p class="hero-description">
+                Enhance your team's productivity with WorkKit - the ultimate task management and collaboration platform.
+                Streamline your workflow, improve communication, and achieve success together.
+            </p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="title">Key Features</div>
+        <div class="info">
+            Discover the powerful features that make WorkKit indispensable for your team:
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <p class="feature-title">Task Management</p>
+                <p class="feature-description">
+                    Efficiently assign tasks, set deadlines, and track progress in real-time.
+                </p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">Team Collaboration</p>
+                <p class="feature-description">
+                    Foster collaboration with your team.
+                </p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">Productivity Tools</p>
+                <p class="feature-description">
+                    Use productivity tools to streamline work.
+                </p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">Customizable Workflow</p>
+                <p class="feature-description">
+                    Tailor WorkKit to fit your unique workflow.
+                </p>
+            </div>
+            <div class="feature">
+                <p class="feature-title">Real-time Updates</p>
+                <p class="feature-description">
+                    Stay informed with updates on task progress.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 WorkKit. All rights reserved.</p>
+    </div>
+</body>
+</html>

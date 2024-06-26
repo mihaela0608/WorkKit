@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WorkKit</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2ecc71;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .nav-bar {
+            background-color: rgba(39, 174, 96, 0.9);
+            padding: 15px 20px;
+            text-align: right;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-button:hover {
+            opacity: 0.7;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-left: 20px;
+            font-family: 'Arial Black', sans-serif;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-icon {
+            color: #ffffff;
+            font-size: 24px;
+            margin-right: 20px;
+            cursor: pointer;
+            margin-right: 40px;
+        }
+
+        .profile-icon:hover {
+            opacity: 0.7;
+        }
+
+        .about-hero {
+            background-image: url('about-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 80px;
+        }
+
+        .about-title {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-description {
+            font-size: 24px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-section {
+            background-color: #ffffff;
+            color: #2c3e50;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .mission-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+
+        .mission-content {
+            font-size: 24px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .values-section {
+            background-color: #ecf0f1;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .values-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #27ae60;
+        }
+
+        .values-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .value-item {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: scale(1.05);
+        }
+
+        .value-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+
+        .value-description {
+            font-size: 18px;
+            color: #2c3e50;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+        .logo-link{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+
+<div class="about-hero">
+        <div class="about-content">
+            <p class="about-title">About Us</p>
+            <p class="about-description">
+                At WorkKit, we believe in the power of seamless communication and efficient task management.
+                Our mission is to revolutionize the way teams collaborate and ensure every project is a success.
+            </p>
+        </div>
+    </div>
+
+    <div class="mission-section">
+        <p class="mission-title">Our Mission</p>
+        <div class="mission-content">
+            <p>
+                Our mission is to enhance productivity and streamline workflows through innovative task management solutions.
+                We aim to bridge the communication gap within teams, ensuring everyone is aligned and working towards common goals.
+            </p>
+            <p>
+                By providing intuitive tools and features, we empower teams to manage tasks efficiently, improve collaboration,
+                and achieve outstanding results. WorkKit is committed to creating a dynamic and productive work environment
+                for organizations of all sizes.
+            </p>
+        </div>
+    </div>
+
+    <div class="values-section">
+        <p class="values-title">Our Values</p>
+        <div class="values-content">
+            <div class="value-item">
+                <p class="value-title">Collaboration</p>
+                <p class="value-description">
+                    We foster a culture of collaboration, where every team member's input is valued and communication flows seamlessly.
+                </p>
+            </div>
+            <div class="value-item">
+                <p class="value-title">Innovation</p>
+                <p class="value-description">
+                    We are committed to continuous innovation, constantly improving our platform to meet the evolving needs of our users.
+                </p>
+            </div>
+            <div class="value-item">
+                <p class="value-title">Integrity</p>
+                <p class="value-description">
+                    We uphold the highest standards of integrity in all our actions, ensuring transparency and honesty in everything we do.
+                </p>
+            </div>
+            <div class="value-item">
+                <p class="value-title">Excellence</p>
+                <p class="value-description">
+                    We strive for excellence in every aspect of our work, delivering high-quality solutions and exceptional customer service.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 WorkKit. All rights reserved.</p>
+    </div>
+</body>
+</html>
